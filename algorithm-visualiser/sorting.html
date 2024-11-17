@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="styles/sorting.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">
+            <a href="index.html">Algorithm Visualizer</a>
+            <span class="separator">></span>
+            <span>Sorting</span>
+        </div>
+        <div class="nav-controls">
+            <div class="control-group">
+                <label>Speed:</label>
+                <input type="range" id="speed-control" min="1" max="200" value="100">
+            </div>
+            <div class="control-group">
+                <label>Array Size:</label>
+                <input type="range" id="size-control" min="10" max="100" value="50">
+            </div>
+            <button onclick="generateNewArray()">Generate New Array</button>
+            <button onclick="bubbleSort()" class="sort-btn">Bubble Sort</button>
+            <button onclick="selectionSort()" class="sort-btn">Selection Sort</button>
+            <button onclick="insertionSort()" class="sort-btn">Insertion Sort</button>
+            <button onclick="quickSort()" class="sort-btn">Quick Sort</button>
+            <button onclick="mergeSort()" class="sort-btn">Merge Sort</button>
+            <button onclick="stopSorting()" id="stop-btn" disabled>Stop</button>
+        </div>
+    </nav>
+    <div id="bars-container"></div>
+    <script src="js/sorting/algorithms.js"></script>
+    <script src="js/sorting/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinding Visualizer</title>
+    <link rel="stylesheet" href="styles/pathfinding.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">Pathfinding Visualizer</div>
+        <div class="nav-controls">
+            <select id="algorithm-select">
+                <option value="dijkstra">Dijkstra's Algorithm</option>
+                <option value="astar">A* Search</option>
+                <option value="bfs">Breadth First Search</option>
+                <option value="dfs">Depth First Search</option>
+            </select>
+            <select id="speed-select">
+                <option value="fast">Fast</option>
+                <option value="normal" selected>Normal</option>
+                <option value="slow">Slow</option>
+            </select>
+            <button onclick="generateRandomWalls()">Random Walls</button>
+            <button onclick="generateMaze()">Generate Maze</button>
+            <button onclick="clearGrid()">Clear Grid</button>
+            <button onclick="clearPath()">Clear Path</button>
+            <button onclick="visualize()" class="primary">Visualize</button>
+        </div>
+    </nav>
+    <div class="instructions">
+        <p>Click and drag to draw walls. Drag the start (green) and target (red) nodes to reposition them.</p>
+    </div>
+    <div class="grid-container">
+        <div id="grid"></div>
+    </div>
+    <script src="js/pathfinding/Node.js"></script>
+    <script src="js/pathfinding/algorithms.js"></script>
+    <script src="js/pathfinding/mazeGenerator.js"></script>
+    <script src="js/pathfinding/main.js"></script>
+</body>
+</html> 
